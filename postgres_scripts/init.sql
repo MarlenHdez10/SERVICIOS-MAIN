@@ -1,5 +1,7 @@
 -- Conectarse a la base de datos
-\c registros;
+
+--\c registros;
+
 
 -- Habilitar extensión para funciones criptográficas (Opcional pero útil)
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
@@ -160,4 +162,6 @@ CREATE INDEX IF NOT EXISTS idx_correo ON usuarios (correo_electronico);
 CREATE INDEX IF NOT EXISTS idx_servicios_cliente ON servicios(cliente_id);
 CREATE INDEX IF NOT EXISTS idx_servicios_trabajador ON servicios(trabajador_id);
 CREATE INDEX IF NOT EXISTS idx_servicios_estado ON servicios(estado);
+
 CREATE INDEX IF NOT EXISTS idx_propuestas_servicio ON propuestas(servicio_id);
+
