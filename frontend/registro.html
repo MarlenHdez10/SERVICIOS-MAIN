@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- LEAFLET CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="/frontend/css/login.css">
+    <link rel="stylesheet" href="css/login.css">
     <style>
         #mapa-contenedor {
             height: 300px;
@@ -220,7 +220,7 @@
         async function cargarCategorias() {
             const contenedor = document.getElementById('lista-oficios');
             try {
-                const res = await fetch("http://localhost:8080/categorias");
+                const res = await fetch("https://servicios-api.onrender.com/categorias");
                 const categorias = await res.json();
                 contenedor.innerHTML = ""; 
                 categorias.forEach(cat => {
